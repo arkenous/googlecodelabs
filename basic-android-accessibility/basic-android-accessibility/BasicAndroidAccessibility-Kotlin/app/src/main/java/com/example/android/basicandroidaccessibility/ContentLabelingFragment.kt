@@ -50,8 +50,10 @@ class ContentLabelingFragment : Fragment() {
     private fun updateImageButton() {
         if (playing) {
             playPauseToggleImageView.setImageResource(R.drawable.ic_pause)
+            playPauseToggleImageView.contentDescription = getString(R.string.pause)
         } else {
             playPauseToggleImageView.setImageResource(R.drawable.ic_play_arrow)
+            playPauseToggleImageView.contentDescription = getString(R.string.play)
         }
     }
 }
