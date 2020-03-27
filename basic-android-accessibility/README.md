@@ -82,3 +82,19 @@ Androidがデフォルトで提供しているUIコンポーネントはAccessib
 
 Custom Viewを実装をする場合、Accessibilityに対応させるのは急激に難しくなり、相当な労力を要する。
 可能な限り、Android標準のUIコンポーネントを活用するか、あるいはそれらを拡張して用いるべきである。Custom Viewが絶対に必要であるなら、それをAccessibleにする必要がある。さもなくば、TalkBackのようなサービスにおいてそのViewは完全に無視され、ユーザの利便性を損なってしまう。
+
+## Making Touch Targets Large
+
+指が太かったり運動技能が低下しているなどの理由で、操作対象の要素の表示サイズが小さいと、多くの人にとって操作がしづらくなる。スクリーンリーダのユーザでタッチ操作によりアプリを操作している場合は、なおさらである。
+
+View要素が実際にどれだけの画面領域を持っているかを視覚的に知るためには、以下の操作によりShow layout bounds（レイアウト境界を表示）を有効にすると良い。
+
+Settings（設定） -> System（システム） -> Developer Options（開発者向けオプション） -> Show layout bounds（レイアウト境界を表示）をONに
+
+
+大抵の場合、タッチ操作可能なエリアは最低でも48dp * 48dpのサイズを確保すべきである。これより大きければ、なお良い。
+タッチ操作可能なエリアを拡大させる方法として、以下の方法があり、いずれも似た結果となる。
+
+- minWidthとminHeightを指定する
+- paddingを追加する
+- [TouchDelegate API](http://developer.android.com/reference/android/view/TouchDelegate.html)を用いる
