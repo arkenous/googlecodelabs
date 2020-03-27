@@ -98,3 +98,9 @@ Settings（設定） -> System（システム） -> Developer Options（開発�
 - minWidthとminHeightを指定する
 - paddingを追加する
 - [TouchDelegate API](http://developer.android.com/reference/android/view/TouchDelegate.html)を用いる
+
+## Ensuring Adequate Color Contrast
+
+前景と背景のコントラストが十分でないと、ロービジョンの方はスクリーン上の情報を読み取れない。
+[WCAG](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)は全てのテキストについて最低限のコントラスト比を4.5:1、大文字や太字のテキストについて最低限のコントラスト比を3.0:1とし、これに適合するか超えるようにすべきだとしている。
+[WebAIM](https://webaim.org/resources/contrastchecker/)のようなツールを用いてコントラスト比を調べられる。あるいは、[Accessibility Scanner（ユーザー補助検証ツール）](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor)を用いる方法もある。
