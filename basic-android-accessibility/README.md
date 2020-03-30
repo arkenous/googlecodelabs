@@ -104,3 +104,21 @@ Settings（設定） -> System（システム） -> Developer Options（開発�
 前景と背景のコントラストが十分でないと、ロービジョンの方はスクリーン上の情報を読み取れない。
 [WCAG](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)は全てのテキストについて最低限のコントラスト比を4.5:1、大文字や太字のテキストについて最低限のコントラスト比を3.0:1とし、これに適合するか超えるようにすべきだとしている。
 [WebAIM](https://webaim.org/resources/contrastchecker/)のようなツールを用いてコントラスト比を調べられる。あるいは、[Accessibility Scanner（ユーザー補助検証ツール）](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor)を用いる方法もある。
+
+## Accessibility Scanner
+
+Google Playにて、Accessibility Scanner（ユーザー補助検証ツール）というツールがGoogleより提供されている。これを用いることで、Androidアプリでどこを改善すればアクセシビリティを向上できるかが容易に分かる。
+
+アプリをインストールしたら、以下からこの機能を有効にできる。
+
+Settings（設定） -> Accessibility（ユーザー補助） -> Accessibility Scanner（ユーザー補助検証ツール）
+
+これを有効にすると、権限許可の画面が出た後、画面上にロングタップ＆ドラッグ操作で移動可能なFloating Action Buttonが表示される。
+
+Accessibilityを検査したいアプリを起動した上でこのFABをタップし、「スナップショット」をタップすると、画面上の各要素を自動的に検査し、改善箇所をわかりやすい形で提案してくれる。
+提案を受けてアプリを修正していくことで、アプリのアクセシビリティ向上に寄与できる。
+
+このようなツールを用いることで、コントラスト比といった簡単なものの検出は可能である。しかしながら、手作業による検査を置き換えるものではないことに注意が必要である。
+Scannerによる検査では、情報の見せ方がよく整理されていて単純明快であるか、タッチ操作や音声操作といった複数の操作方法をサポートしているか、TalkBackを効果的に使える実装であるか、といった点までは見られない。
+実際のユーザに試していただくことを、常に心に銘じておこう。
+
